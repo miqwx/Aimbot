@@ -29,7 +29,7 @@ local c,lt=0,tick()
 R.RenderStepped:Connect(function() c=c+1;if tick()-lt>=1 then lbl.Text="FPS: "..c;c=0;lt=tick() end end)
 
 -- AIM ASSIST Head Aim
-local FOV=80;local assist=0.1;local headOffset=Vector3.new(0,1.5,0)
+local FOV=10;local assist=0.1;local headOffset=Vector3.new(0,1.5,0)
 R.RenderStepped:Connect(function()
     if not LP.Character or not LP.Character:FindFirstChild("HumanoidRootPart") then return end
     local closest=FOV; local target
